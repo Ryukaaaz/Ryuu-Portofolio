@@ -12,10 +12,19 @@ const projects = [
     },
     {
         id: 2,
-        title:"Funminton",
-        description: "A Badminton Event Management System that includes Bill Splitting for player expenses, built with Laravel and Livewire.",
-        image: "/projects/tokoemas.png",
-        tags: ["TailwindCSS", "Laravel"],
+        title:"Doutte",
+        description: "A Landing page for a small business that sells sourdough and coffee, built using React and TailwindCSS to create an engaging and responsive user experience.",
+        image: "/projects/doutte_landingPage.png",
+        tags: ["React", "TailwindCSS"],
+        demoUrl: "https://doutte.vercel.app/",
+        githubUrl: "#",
+    },
+    {
+        id: 3,
+        title:"JobTrackr",
+        description: "A Job Tracking Website that helps users manage and track their job applications effectively, built with Laravel, React and TailwindCSS for a seamless user experience.",
+        image: "/projects/jobtrackr_dashboard.png",
+        tags: ["React", "TailwindCSS"],
         demoUrl: "#",
         githubUrl: "#",
     },
@@ -51,6 +60,16 @@ export const ProjectSection = () => {
                                 <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                                 <div className="flex justify-between items-center">
                                     <div className="flex space-x-3">
+                                        {project.demoUrl !== "#" && (
+                                            <a
+                                                href={project.demoUrl}
+                                                className="cosmic-button-sm flex items-center gap-2"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Live Demo <ArrowRight size={16} />
+                                            </a>
+                                        )}
                                         {/* <a href={project.demoUrl} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                             <ExternalLink size={20}/>
                                         </a> */}
